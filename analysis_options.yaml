@@ -21,8 +21,34 @@ linter:
   # `// ignore_for_file: name_of_lint` syntax on the line or in the file
   # producing the lint.
   rules:
-    # avoid_print: false  # Uncomment to disable the `avoid_print` rule
-    # prefer_single_quotes: true  # Uncomment to enable the `prefer_single_quotes` rule
+    # Financial-app safety: a stray print() must never be the only record of
+    # something going wrong in a POS terminal. Use a proper logger instead.
+    avoid_print: true
+
+    # Immutability guarantees for anything modeling money, quantity, or price
+    # (see the Freezed requirement in ARCHITECTURE.md) — these catch the
+    # cases Freezed itself doesn't, e.g. accidental non-const widget trees.
+    prefer_const_constructors: true
+    prefer_const_literals_to_create_immutables: true
+    prefer_final_fields: true
+    prefer_final_locals: true
+
+    # Every public function's return type must be explicit — no relying on
+    # inference at a module boundary, which hides accidental type changes.
+    always_declare_return_types: true
+
+    # Forces Dart's formatter into stable, single-item-per-line diffs on
+    # multi-line argument lists, instead of one commit reformatting an
+    # entire call site just because a line got one argument longer.
+    require_trailing_commas: true
+
+    # Type-safety guard appropriate for code that touches money and stock.
+    avoid_dynamic_calls: true
+
+    # Consistent file structure: imports/exports grouped and ordered the
+    # same way everywhere, constructors declared before other members.
+    directives_ordering: true
+    sort_constructors_first: true
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
