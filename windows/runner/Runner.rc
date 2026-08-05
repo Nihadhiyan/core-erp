@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.nihadh.pos" "\0"
-            VALUE "FileDescription", "nihadh_pos" "\0"
+            VALUE "CompanyName", "com.clausis.apox" "\0"
+            VALUE "FileDescription", "clausis_pos_edge" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "nihadh_pos" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2026 com.nihadh.pos. All rights reserved." "\0"
-            VALUE "OriginalFilename", "nihadh_pos.exe" "\0"
-            VALUE "ProductName", "nihadh_pos" "\0"
+            VALUE "InternalName", "clausis_pos_edge" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2026 com.clausis.apox. All rights reserved." "\0"
+            VALUE "OriginalFilename", "clausis_pos_edge.exe" "\0"
+            VALUE "ProductName", "clausis_pos_edge" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

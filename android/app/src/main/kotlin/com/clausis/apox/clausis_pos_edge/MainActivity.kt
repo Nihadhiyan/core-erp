@@ -1,4 +1,4 @@
-package com.nihadh.pos.nihadh_pos
+package com.clausis.apox.clausis_pos_edge
 
 import io.flutter.embedding.android.FlutterActivity
 
